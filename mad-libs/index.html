@@ -24,36 +24,36 @@
 			<b>Instructions:</b> Build an angular application that replicates the classic game MadLibs.  Users should be able to edit the form, and watch their updates happen live in the story.  You should create default values for the story when you create your controller in your JavaScript file.
 		</div>
 
-
 		<!-- Initiate you application.  -->
-		<div>
+		<div ng-app="myApp" ng-controller="madCtrl" ng-init="name='';age='';location='';food=''">
 
 			<!-- Story: bind your variables where appropriate -->
 			<p id="story">
-				This is a story about <text></text>. 
-				<text></text> is <text></text>
-				years old.  One day, <text></text> went to 
-				<text></text> and ate <text></text>. 
+				This is a story about <text ng-bind="name"></text>. 
+				<text ng-bind="name"></text> is <text ng-bind="age"></text>
+				years old.  One day, <text ng-bind="name"></text> went to 
+				<text ng-bind="location"></text> and ate <text ng-bind="food"></text>. 
 			</p>
 
-			<!-- Form: associate the appropriate model with each input element -->
+			<!-- Form: associate the appropriate bind with each input element -->
 			<form>
 				<!-- Name -->
 				<label for="name">Name:</label>
-				<input class="form-control" id="name"></input><br/>
+				<input class="form-control" id="name" ng-model="name"></input><br/>
 
 				<!-- Age -->
 				<label for="age">Age:</label>
-				<input class="form-control" id="age"></input><br/>
+				<input class="form-control" id="age" ng-model="age"></input><br/>
 
 				<!-- Location -->
 				<label for="location">Location:</label>
-				<input class="form-control" id="location"></input><br/>
+				<input class="form-control" id="location" ng-model="location"></input><br/>
 
 				<!-- Food -->
 				<label for="food">Food:</label>
-				<input class="form-control" id="food"></input><br/>
+				<input class="form-control" id="food" ng-model="food"></input><br/>
 			</form>			
 		</div>
+
 	</body>
 </html>

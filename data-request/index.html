@@ -39,15 +39,14 @@
 			</ol>
 		</div>
 
-
-
-
 		<!-- Bind your application to this controller -->
-		<div class="container">			
-			<ul>
+		<div class="container" ng-app="myApp" ng-controller="customersCtrl">			
+			<ul ng-repeat="item in names ">
 				<!-- Create your <li> elements in here!  -->
-		
-			</ul>
+		        <li>{{item.Name}}</li>
+                <li>{{item.City}}</li>  
+                <li>{{item.Country}}</li>
+            </ul>
 		</div>
 	</body>
 </html>
